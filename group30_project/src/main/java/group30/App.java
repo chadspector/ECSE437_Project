@@ -16,7 +16,7 @@ public class App {
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
-        System.out.println("5. Differentiation");
+        System.out.println("5. Polynomial Differentiation");
         System.out.println("6. Integration (using Simpson's rule)");
 
         System.out.print("\nWhat operation would you like to do: ");
@@ -34,6 +34,8 @@ public class App {
             case 4:
                 break;
             case 5:
+                Differentiation diff = new Differentiation();
+                diff.calculate();
                 break;
             case 6:
                 break;
