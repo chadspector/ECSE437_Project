@@ -19,7 +19,7 @@ public class App {
         System.out.println("5. Differentiation");
         System.out.println("6. Integration (using Simpson's rule)");
 
-        System.out.print("\nWhat would you like to do?: ");
+        System.out.print("\nWhat operation would you like to do: ");
 
         int choice = kb.nextInt();
         System.out.println();
