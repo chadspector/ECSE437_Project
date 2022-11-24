@@ -11,10 +11,10 @@ public class Exponent {
         System.out.println("Exponential (x^y)");
 
         System.out.print("\nFirst Number (x): ");
-        x = kb.nextFloat();
+        x = kb.nextDouble();
 
         System.out.print("\nSecond Number (y): ");
-        y = kb.nextFloat();
+        y = kb.nextDouble();
 
         kb.close();
         double result = Math.pow(x, y);
