@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class Addition {
 
     void calculate() {
-        double x, y;
+        float x, y;
 
         Scanner kb = new Scanner(System.in);
         System.out.println("Addition");
 
         System.out.print("\nFirst Number: ");
-        x = kb.nextDouble();
+        x = kb.nextFloat();
 
         System.out.print("\nSecond Number: ");
-        y = kb.nextDouble();
+        y = kb.nextFloat();
 
         kb.close();
-        double result = x + y;
+        float result = x + y;
         System.out.println("\nResult: " + x + " + " + y + " = " + result);
     }
 }
