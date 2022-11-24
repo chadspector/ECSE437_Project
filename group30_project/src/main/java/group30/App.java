@@ -30,6 +30,8 @@ public class App {
             case 2:
                 break;
             case 3:
+                Multiplication mult = new Multiplication();
+                mult.calculate();
                 break;
             case 4:
                 break;
