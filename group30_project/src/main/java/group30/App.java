@@ -32,6 +32,8 @@ public class App {
             case 3:
                 break;
             case 4:
+                Division div = new Division();
+                div.calculate();
                 break;
             case 5:
                 break;
