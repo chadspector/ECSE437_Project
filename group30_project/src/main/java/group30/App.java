@@ -17,7 +17,8 @@ public class App {
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
         System.out.println("5. Differentiation");
-        System.out.println("6. Integration (using Simpson's rule)");
+        System.out.println("6. Exponential");
+        System.out.println("7. Square Root");
 
         System.out.print("\nWhat operation would you like to do: ");
 
@@ -36,6 +37,8 @@ public class App {
             case 5:
                 break;
             case 6:
+                break;
+            case 7:
                 break;
             default:
                 System.out.print("Please pick a valid option!");
