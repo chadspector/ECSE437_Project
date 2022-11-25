@@ -45,6 +45,8 @@ public class App {
                 diff.calculate();
                 break;
             case 6:
+                Exponent exp = new Exponent();
+                exp.calculate();
                 break;
             case 7:
                 break;
