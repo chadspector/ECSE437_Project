@@ -29,6 +29,8 @@ public class App {
             case 1:
                 break;
             case 2:
+                Subtraction sub = new Subtraction();
+                sub.calculate();
                 break;
             case 3:
                 break;
