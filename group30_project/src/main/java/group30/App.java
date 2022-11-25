@@ -49,6 +49,8 @@ public class App {
                 exp.calculate();
                 break;
             case 7:
+                SquareRoot sqrt = new SquareRoot();
+                sqrt.calculate();
                 break;
             default:
                 System.out.print("Please pick a valid option!");
