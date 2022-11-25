@@ -16,8 +16,9 @@ public class App {
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
-        System.out.println("5. Polynomial Differentiation");
-        System.out.println("6. Integration (using Simpson's rule)");
+        System.out.println("5. Differentiation");
+        System.out.println("6. Exponential");
+        System.out.println("7. Square Root");
 
         System.out.print("\nWhat operation would you like to do: ");
 
@@ -28,16 +29,24 @@ public class App {
             case 1:
                 break;
             case 2:
+                Subtraction sub = new Subtraction();
+                sub.calculate();
                 break;
             case 3:
+                Multiplication mult = new Multiplication();
+                mult.calculate();
                 break;
             case 4:
+                Division div = new Division();
+                div.calculate();
                 break;
             case 5:
                 Differentiation diff = new Differentiation();
                 diff.calculate();
                 break;
             case 6:
+                break;
+            case 7:
                 break;
             default:
                 System.out.print("Please pick a valid option!");
