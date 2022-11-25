@@ -33,6 +33,8 @@ public class App {
                 sub.calculate();
                 break;
             case 3:
+                Multiplication mult = new Multiplication();
+                mult.calculate();
                 break;
             case 4:
                 break;
