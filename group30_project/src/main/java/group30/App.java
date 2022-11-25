@@ -41,6 +41,8 @@ public class App {
                 div.calculate();
                 break;
             case 5:
+                Differentiation diff = new Differentiation();
+                diff.calculate();
                 break;
             case 6:
                 break;
