@@ -1,37 +1,34 @@
 package group30;
 
-import java.util.Scanner;
-
 public class Differentiation {
 
     long derivTerm(String term, long x) {
 
-        // Get coefficient
-        String coeffStr = "";
+        String stringCoeff = "";
         int i;
         for (i = 0; term.charAt(i) != 'x'; i++) {
             if (term.charAt(i) == ' ')
                 continue;
-            coeffStr += (term.charAt(i));
+            stringCoeff += (term.charAt(i));
         }
 
-        long coeff = Long.parseLong(coeffStr);
+        long coeff = Long.parseLong(stringCoeff);
 
-        String powStr = "";
+        String stringExp = "";
         for (i = i + 2; i != term.length() && term.charAt(i) != ' '; i++) {
-            powStr += term.charAt(i);
+            stringExp += term.charAt(i);
         }
 
-        long power = Long.parseLong(powStr);
+        long exp = Long.parseLong(stringExp);
 
-        return coeff * power * (long) Math.pow(x, power - 1);
+        return coeff * exp * (long) Math.pow(x, exp - 1);
     }
 
-    long findDerivative(String poly, int x) {
+    long findDerivative(String eq, int x) {
         long res = 0;
 
         int i = 0;
-        String[] terms = poly.split("\\+");
+        String[] terms = eq.split("\\+");
         while (i < terms.length) {
             res = (res + derivTerm(terms[i], x));
             i++;
@@ -39,25 +36,10 @@ public class Differentiation {
         return res;
     }
 
-    void calculate() {
-        String str;
-        int x;
+    long calculate(String str, int val) {
 
-        Scanner kb = new Scanner(System.in);
-        System.out.println("Polynomial Differentiation (e.g. 4x^3 + 3x^2 + 2x)");
-        System.out.println(
-                "Note: The input format is such that there is a white space between a term and the ‘+’ symbol");
+        long result = findDerivative(str, val);
 
-        System.out.print("\nPolynomial: ");
-        str = kb.nextLine();
-
-        System.out.print("\nValue of x (Integer): ");
-        x = kb.nextInt();
-
-        kb.close();
-
-        long result = findDerivative(str, x);
-
-        System.out.println("\nDerivative of p(x) = " + str + " with x = " + x + " is p'(" + x + ") = " + result);
+        return result;
     }
 }
