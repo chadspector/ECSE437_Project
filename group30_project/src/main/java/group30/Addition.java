@@ -2,9 +2,9 @@ package group30;
 
 public class Addition {
 
-    float calculate(float x, float y) {
+    double calculate(double x, double y) {
 
-        float result = x + y;
+        double result = x + y;
         return result;
     }
 }

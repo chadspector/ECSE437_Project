@@ -21,8 +21,7 @@ public class App {
         int choice = kb.nextInt();
         System.out.println();
 
-        float x, y, res;
-        double a, b, ans;
+        double x, y, res;
 
         switch (choice) {
             case 1:
@@ -30,10 +29,10 @@ public class App {
                 System.out.println("Addition");
 
                 System.out.print("\nFirst Number: ");
-                x = kb.nextFloat();
+                x = kb.nextDouble();
 
                 System.out.print("\nSecond Number: ");
-                y = kb.nextFloat();
+                y = kb.nextDouble();
 
                 Addition add = new Addition();
                 res = add.calculate(x, y);
@@ -45,10 +44,10 @@ public class App {
                 System.out.println("Subtraction");
 
                 System.out.print("\nFirst Number: ");
-                x = kb.nextFloat();
+                x = kb.nextDouble();
 
                 System.out.print("\nSecond Number: ");
-                y = kb.nextFloat();
+                y = kb.nextDouble();
 
                 Subtraction sub = new Subtraction();
                 res = sub.calculate(x, y);
@@ -59,10 +58,10 @@ public class App {
                 System.out.println("Multiplication");
 
                 System.out.print("\nFirst Number: ");
-                x = kb.nextFloat();
+                x = kb.nextDouble();
 
                 System.out.print("\nSecond Number: ");
-                y = kb.nextFloat();
+                y = kb.nextDouble();
 
                 Multiplication mult = new Multiplication();
                 res = mult.calculate(x, y);
@@ -73,10 +72,10 @@ public class App {
                 System.out.println("Division");
 
                 System.out.print("\nFirst Number: ");
-                x = kb.nextFloat();
+                x = kb.nextDouble();
 
                 System.out.print("\nSecond Number: ");
-                y = kb.nextFloat();
+                y = kb.nextDouble();
 
                 if (y == 0) {
                     System.out.println("Error: Cannot perform division by zero");
@@ -108,27 +107,27 @@ public class App {
                 System.out.println("Exponential (x^y)");
 
                 System.out.print("\nFirst Number (x): ");
-                a = kb.nextDouble();
+                x = kb.nextDouble();
 
                 System.out.print("\nSecond Number (y): ");
-                b = kb.nextDouble();
+                y = kb.nextDouble();
 
                 Exponent exp = new Exponent();
 
-                ans = exp.calculate(a, b);
+                res = exp.calculate(x, y);
 
-                System.out.println("\nResult: " + a + "^" + b + " = " + ans);
+                System.out.println("\nResult: " + x + "^" + y + " = " + res);
                 break;
             case 7:
                 System.out.println("Square Root");
 
                 System.out.print("\nNumber: ");
-                a = kb.nextDouble();
+                x = kb.nextDouble();
 
                 SquareRoot sqrt = new SquareRoot();
-                ans = sqrt.calculate(a);
+                res = sqrt.calculate(x);
 
-                System.out.println("\nResult: sqrt(" + a + ") = " + ans);
+                System.out.println("\nResult: sqrt(" + x + ") = " + res);
                 break;
             default:
                 System.out.print("Please pick a valid option!");
