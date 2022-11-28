@@ -10,9 +10,9 @@ public class SubtractionTest {
     private double delta;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() throws Exception {
         sub = new Subtraction();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 

@@ -10,9 +10,9 @@ public class DivisionTest {
     private double delta;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() throws Exception {
         division = new Division();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 

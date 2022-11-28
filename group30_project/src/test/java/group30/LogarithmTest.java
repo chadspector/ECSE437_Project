@@ -10,9 +10,9 @@ public class LogarithmTest {
     private double delta;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() throws Exception {
         log = new Logarithm();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 

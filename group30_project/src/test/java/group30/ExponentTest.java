@@ -10,9 +10,9 @@ public class ExponentTest {
     private double delta;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() throws Exception {
         exponent = new Exponent();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 

@@ -10,9 +10,9 @@ public class MultiplicationTest {
     private double delta;
 
     @Before
-    void setUp() throws Exception {
+    public void setUp() throws Exception {
         multiplication = new Multiplication();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 

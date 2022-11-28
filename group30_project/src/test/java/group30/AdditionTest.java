@@ -12,7 +12,7 @@ public class AdditionTest {
     @Before
     public void setUp() throws Exception {
         addition = new Addition();
-        delta = 0.001;
+        delta = 0.01;
 
     }
 
