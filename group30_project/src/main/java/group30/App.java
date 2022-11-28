@@ -12,9 +12,9 @@ public class App {
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
         System.out.println("4. Division");
-        System.out.println("5. Differentiation");
-        System.out.println("6. Exponential");
-        System.out.println("7. Square Root");
+        System.out.println("5. Exponential");
+        System.out.println("6. Square Root");
+        System.out.println("7. Logarithm (base 10)");
 
         System.out.print("\nWhat operation would you like to do: ");
 
@@ -66,7 +66,7 @@ public class App {
                 Multiplication mult = new Multiplication();
                 res = mult.calculate(x, y);
 
-                System.out.println("\nResult: " + x + " * " + y + " = " + res);
+                System.out.println("\nResult: " + x + " x " + y + " = " + res);
                 break;
             case 4:
                 System.out.println("Division");
@@ -86,24 +86,6 @@ public class App {
                 }
                 break;
             case 5:
-                System.out.println("Polynomial Differentiation (e.g. 4x^3 + 3x^2 + 2x)");
-                System.out.println(
-                        "Note: The input format is such that there is a white space between a term and the ‘+’ symbol");
-
-                System.out.print("\nPolynomial: ");
-                String str = kb.nextLine();
-
-                System.out.print("\nValue of x (Integer): ");
-                int val = kb.nextInt();
-
-                Differentiation diff = new Differentiation();
-
-                long result = diff.calculate(str, val);
-
-                System.out.println(
-                        "\nDerivative of p(x) = " + str + " with x = " + val + " is p'(" + val + ") = " + result);
-                break;
-            case 6:
                 System.out.println("Exponential (x^y)");
 
                 System.out.print("\nFirst Number (x): ");
@@ -118,16 +100,35 @@ public class App {
 
                 System.out.println("\nResult: " + x + "^" + y + " = " + res);
                 break;
-            case 7:
+            case 6:
                 System.out.println("Square Root");
 
                 System.out.print("\nNumber: ");
                 x = kb.nextDouble();
 
-                SquareRoot sqrt = new SquareRoot();
-                res = sqrt.calculate(x);
+                if (x <= 0) {
+                    System.out.println("Error: Cannot square root a negative number");
+                } else {
+                    SquareRoot sqrt = new SquareRoot();
+                    res = sqrt.calculate(x);
 
-                System.out.println("\nResult: sqrt(" + x + ") = " + res);
+                    System.out.println("\nResult: sqrt(" + x + ") = " + res);
+                }
+                break;
+            case 7:
+                System.out.println("Logarithm (base 10)");
+
+                System.out.print("\nNumber (log(x)): ");
+                x = kb.nextDouble();
+
+                if (x < 0) {
+                    System.out.println("Error: Cannot perform logarithm on a negative number or zero");
+                } else {
+                    Logarithm sqrt = new Logarithm();
+                    res = sqrt.calculate(x);
+
+                    System.out.println("\nResult: log(" + x + ") = " + res);
+                }
                 break;
             default:
                 System.out.print("Please pick a valid option!");
