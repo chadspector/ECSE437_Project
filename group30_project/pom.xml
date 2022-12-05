@@ -74,6 +74,7 @@
             <include>**/ExponentTest.class</include>
             <include>**/SquareRootTest.class</include>
             <include>**/LogarithmTest.class</include>
+            <include>**/TestRunner.class</include>
             </includes>
           </configuration>
         </plugin>
